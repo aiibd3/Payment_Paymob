@@ -10,7 +10,11 @@ void main() {
 void initializePaymob() async {
   try {
     await FlutterPaymob.instance.initialize(
-        apiKey:"ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T1RneE9EVXdMQ0p1WVcxbElqb2lhVzVwZEdsaGJDSjkuTURkSlJ3SldCQmdxMG14RDgtcmptSTh4UUhaLWNPTWYxeVRIdmZHTEI4eXlTdGUzc25DUnRuZWNnYWF2cGFPcHlHOGJmNEJHV2RyUndMcTcxVnpLakE=",
+        //TODO: Enter your Paymob API Key here
+        //  To get your API key, visit https://accept.paymob.com/api/
+        //  Paymob API key: https://accept.paymob.com/api/
+        apiKey:
+            "ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2T1RneE9EVXdMQ0p1WVcxbElqb2lhVzVwZEdsaGJDSjkuTURkSlJ3SldCQmdxMG14RDgtcmptSTh4UUhaLWNPTWYxeVRIdmZHTEI4eXlTdGUzc25DUnRuZWNnYWF2cGFPcHlHOGJmNEJHV2RyUndMcTcxVnpLakE=",
         integrationID: 4598242,
         walletIntegrationId: 4598310,
         iFrameID: 852382);
@@ -66,7 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     currency: "EGP",
                     amount: 100,
                     onPayment: (response) {
-
                       print("*");
                       print("Message: ${response.message}");
                       print("Response Code: ${response.responseCode}");
@@ -119,7 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text("Payment failed: $e"),
-
                     ),
                   );
                 }
